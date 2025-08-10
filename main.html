@@ -9,28 +9,34 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background: linear-gradient(#fdfaf6, #fff);
             color: #333;
+            background-image: url('assets/background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* Keeps background in place while scrolling */
         }
         header {
             text-align: center;
-            padding: 5rem 1rem 3rem;
+            padding: 5rem 1rem 1rem;
             max-width: 900px;
             margin: 0 auto;
-            background: url('https://www.toptal.com/designers/subtlepatterns/uploads/floral-wallpaper.png');
-            background-size: cover;
-            background-position: center;
-            border-bottom: 2px solid #e4d5c6;
         }
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
+            margin-bottom: 1rem;
             color: #6b4b3e;
         }
         header p.lead {
-            font-size: 1.4rem;
+            font-size: 2rem;
+            margin-top: 2.5rem;
             margin-bottom: 2.5rem;
+            color: #5a3e31;
+        }
+        header p {
+            font-size: 1.5rem;
             color: #5a3e31;
         }
         .section-title {
@@ -44,14 +50,7 @@
             text-align: center;
             position: relative;
         }
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: #d1b28a;
-            margin: 0.5rem auto 0;
-        }
+
         .photo {
             width: 100%;
             border-radius: 0.75rem;
@@ -74,10 +73,8 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         footer {
-            background: url('https://www.toptal.com/designers/subtlepatterns/uploads/paper_fibers.png');
             padding: 3rem 1rem;
             margin-top: 4rem;
-            border-top: 2px solid #e4d5c6;
         }
         footer h5 {
             font-family: 'Playfair Display', serif;
@@ -102,18 +99,19 @@
 
 <header>
     <h1>Lukáš & Matěj</h1>
-    <p class="lead">6. září 2025 • Tetín, Srdce na Kamenci</p>
-    <p>Dáváme na vědomí, že jsme se rozhodli spojit své životy a udělat důležitý krok společnou cestou.<br>
-        A protože v tom nechceme být sami, zveme vás, naše rodiny a přátele, abyste u toho byli s námi.</p>
+    <div class="row text-center section">
+        <div class="col-md-6">
+            <p class="lead">6. září 2025 • Tetín, Srdce na Kamenci</p>
+            <p>Dáváme na vědomí, že jsme se rozhodli spojit své životy a udělat důležitý krok společnou cestou.<br>
+                A protože v tom nechceme být sami, zveme vás, naše rodiny a přátele, abyste u toho byli s námi.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="assets/lukas_matej-1.png" alt="Lukáš a Matěj" class="photo">
+        </div>
+    </div>
 </header>
 
 <div class="container" style="max-width: 900px;">
-    <!-- Images Section -->
-    <div class="row text-center section">
-        <div class="col-md-6"><img src="assets/lukash_matej-1.PNG" alt="Lukáš a Matěj" class="photo"></div>
-        <div class="col-md-6"><img src="assets/lukash_matej-2.PNG" alt="Pár" class="photo"></div>
-    </div>
-
     <!-- Main Info -->
     <h2 class="section-title">Harmonogram</h2>
     <div class="row text-center section">
@@ -145,16 +143,25 @@
 
     <!-- Footer Info -->
     <footer>
-        <h5>Dress code</h5>
-        <p>Prosíme o společenské oblečení. Dámy – šaty v odstínech šampaňské nebo vanilkové, vyhněte se výrazně žluté.
-            Pánové – oblek, kravata není nutná, ale pokud ano, v podobných tónech.</p>
+        <h2 class="section-title">Na místě</h2>
+        <div class="row text-center section">
+            <div class="col-md-4">
+                <h5>Dress code</h5>
+                <p>Prosíme o společenské oblečení. Dámy – šaty v odstínech šampaňské nebo vanilkové, vyhněte se výrazně žluté.
+                    Pánové – oblek, kravata není nutná, ale pokud ano, v podobných tónech.</p>
+            </div>
 
-        <h5>Dary</h5>
-        <p>Děkujeme, pokud se rozhodnete nás obdarovat. Nejvíce nám pomohou finanční dary na dokončení venkovních prostor u našeho domečku.</p>
+            <div class="col-md-4">
+                <h5>Dary</h5>
+                <p>Děkujeme, pokud se rozhodnete nás obdarovat. Nejvíce nám pomohou finanční dary na dokončení venkovních prostor u našeho domečku.</p>
+            </div>
 
-        <h5>Ubytování a doprava</h5>
-        <p>V okolí Tetína je několik hotelů a penzionů. Možnost stanování na místě. K dispozici také svatební taxi (max 25–30 km).
-            Více v registračním formuláři.</p>
+            <div class="col-md-4">
+                <h5>Ubytování a doprava</h5>
+                <p>V okolí Tetína je několik hotelů a penzionů. Možnost stanování na místě. K dispozici také svatební taxi (max 25–30 km).
+                    Více v registračním formuláři.</p>
+            </div>
+        </div>
     </footer>
 </div>
 
