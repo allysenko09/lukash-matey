@@ -53,7 +53,7 @@
         }
         header p.lead {
             font-size: 2rem;
-            margin-top: 2.5rem;
+            
             margin-bottom: 2.5rem;
             color: #5a3e31;
             font-weight: 600;
@@ -117,6 +117,120 @@
         .section {
             margin-bottom: 4rem;
         }
+
+        .bg-white-translucent {
+            background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+            border-radius: 12px;                        /* rounded corners */
+            padding: 1rem 1.5rem;                        /* internal spacing */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);   /* subtle shadow for contrast */
+        }
+
+        .dress-code-large-icon {
+            width: 80px !important;
+            height: 80px !important;
+            object-fit: contain;
+        }
+
+        @media (max-width: 576px) {
+
+            .dress-code-large-icon {
+                width: 64px !important;
+                height: 64px !important;
+            }
+        }
+
+        /* Wedding-specific styles */
+        .wedding-heading {
+            color: #927d5a;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.025em;
+        }
+
+        .wedding-text {
+            color: #736250;
+        }
+
+        .wedding-divider {
+            border-top: 1px solid #ecd7b5;
+            opacity: 0.5;
+        }
+
+        /* Icon sizes */
+        .dress-code-header-icon {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+
+        .dress-code-large-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .divider-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        /* Gap utility for older Bootstrap versions */
+        .gap-5 > * + * {
+            margin-top: 3rem !important;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .dress-code-header-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .dress-code-large-icon {
+                width: 64px;
+                height: 64px;
+            }
+
+            .gap-5 > * + * {
+                margin-top: 2rem !important;
+            }
+        }
+
+        /* Footer styles */
+        .footer-gradient {
+            background: linear-gradient(to bottom, #faf3ea, #f6efe4);
+        }
+
+        .footer-heading {
+            color: #b08f5a;
+            line-height: 1.3;
+        }
+
+        .footer-copyright {
+            color: #8a7660;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .footer-subtitle {
+            color: #bcae99;
+        }
+
+        /* Responsive text sizing for footer heading */
+        @media (max-width: 575.98px) {
+            .footer-heading {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .footer-heading {
+                font-size: 2.5rem;
+            }
+        }
+        .bg-warm-light {
+            background-color: #f9f6f2;
+        }
     </style>
 </head>
 <body>
@@ -125,8 +239,8 @@
     <h1>Lukáš & Matěj</h1>
     <div class="row text-center section">
         <div class="col-md-6">
-            <p class="lead">6. září 2025 • Tetín, Srdce na Kamenci</p>
-            <p>Dáváme na vědomí, že jsme se rozhodli spojit své životy a udělat důležitý krok společnou cestou.<br>
+            <p class="lead bg-white-translucent">6. září 2025 • Tetín, Srdce na Kamenci</p>
+            <p class="bg-white-translucent">Dáváme na vědomí, že jsme se rozhodli spojit své životy a udělat důležitý krok společnou cestou.<br>
                 A protože v tom nechceme být sami, zveme vás, naše rodiny a přátele, abyste u toho byli s námi.</p>
         </div>
         <div class="col-md-6">
@@ -135,7 +249,7 @@
     </div>
 </header>
 
-<div class="container" style="max-width: 900px;">
+<div class="container mb-5 pb-5" style="max-width: 900px;">
     <!-- Main Info -->
     <h2 class="section-title">Harmonogram</h2>
     <div class="row text-center section">
@@ -164,31 +278,106 @@
     <div class="text-center my-5">
         <a href="https://forms.gle/BkJvbZfF6x5c26ZE6" class="btn btn-theme">Registrovat se</a>
     </div>
-
-    <!-- Footer Info -->
-    <footer>
-        <h2 class="section-title">Na místě</h2>
-        <div class="row text-center section">
-            <div class="col-md-4">
-                <h5>Dress code</h5>
-                <p>Prosíme o společenské oblečení. Dámy – šaty v odstínech šampaňské nebo vanilkové, vyhněte se výrazně žluté.
-                    Pánové – oblek, kravata není nutná, ale pokud ano, v podobných tónech.</p>
-            </div>
-
-            <div class="col-md-4">
-                <h5>Dary</h5>
-                <p>Děkujeme, pokud se rozhodnete nás obdarovat. Nejvíce nám pomohou finanční dary na dokončení venkovních prostor u našeho domečku.</p>
-            </div>
-
-            <div class="col-md-4">
-                <h5>Ubytování a doprava</h5>
-                <p>V okolí Tetína je několik hotelů a penzionů. Možnost stanování na místě. K dispozici také svatební taxi (max 25–30 km).
-                    Více v registračním formuláři.</p>
-            </div>
-        </div>
-    </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="container-fluid py-5 mx-0 mt-5 bg-warm-light">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6 px-3 px-lg-0">
+            <div class="d-flex flex-column">
+
+                <!-- Dress Code Section -->
+                <section class="text-center">
+                    <div class="d-flex align-items-center justify-content-center gap-4 mb-4">
+                        <img src="assets/dress_flower.png"
+                             alt="Dekorativní ikonka květiny a šatů"
+                             class="dress-code-header-icon"
+                             loading="lazy">
+                        <h2 class="mb-0 display-5 fw-semibold wedding-heading">Dress code</h2>
+                        <img src="assets/suit_hat.png"
+                             alt="Dekorativní ikonka klobouku a motýlka"
+                             class="dress-code-header-icon"
+                             loading="lazy">
+                    </div>
+                    <p class="fs-5 fw-medium lh-lg wedding-text mt-2 mx-auto" style="max-width: 36rem;">
+                        Prosíme o společenské oblečení. Svatba bude ve venkovském duchu, a proto budeme rádi, pokud se dámy obléknou do šatů v odstínech šampaňské nebo vanilkové. Vyhněte se prosím výrazně žluté barvě. Pánové v obleku – kravata není nutná. Pokud ji ale zvolíte, ladila by ideálně do stejných tónů.
+                    </p>
+                    <!-- Icons with descriptions -->
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <img src="assets/champagne_dress.png"
+                                     alt="Ilustrace dámských šatů ve stylu šampaňské barvy"
+                                     class="dress-code-large-icon mb-2"
+                                     loading="lazy">
+                                <p class="small mb-0" style="color: #927d5a;">Dámy: šampaňské/vanilkové šaty</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <img src="assets/suit_icon.png"
+                                     alt="Ilustrace pánského obleku v jemných tónech"
+                                     class="dress-code-large-icon mb-2"
+                                     loading="lazy">
+                                <p class="small mb-0" style="color: #927d5a;">Pánové: oblek, kravata není nutná</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Divider 1 -->
+                <div class="d-flex align-items-center my-4" aria-hidden="true">
+                    <div class="flex-grow-1 wedding-divider"></div>
+                    <img src="assets/gift_heart.png"
+                         alt="Ikonka dárku se srdcem"
+                         class="mx-4 divider-icon"
+                         loading="lazy">
+                    <div class="flex-grow-1 wedding-divider"></div>
+                </div>
+
+                <!-- Gifts Section -->
+                <section class="text-center">
+                    <h2 class="h3 fw-semibold wedding-heading mb-4">Dary</h2>
+                    <p class="fs-5 fw-medium lh-lg wedding-text mx-auto" style="max-width: 36rem;">
+                        Děkujeme, pokud se rozhodnete nás obdarovat. Nejvíce nám pomohou finanční dary – dokončujeme venkovní prostory u našeho domečku a každý příspěvek nám v tom moc pomůže.
+                    </p>
+                </section>
+
+                <!-- Divider 2 -->
+                <div class="d-flex align-items-center my-4" aria-hidden="true">
+                    <div class="flex-grow-1 wedding-divider"></div>
+                    <img src="assets/tent_taxi.png"
+                         alt="Ikonka stanu a taxi auta"
+                         class="mx-4 divider-icon"
+                         loading="lazy">
+                    <div class="flex-grow-1 wedding-divider"></div>
+                </div>
+
+                <!-- Accommodation Section -->
+                <section class="text-center">
+                    <h2 class="h3 fw-semibold wedding-heading mb-4">Ubytování a doprava</h2>
+                    <p class="fs-5 fw-medium lh-lg wedding-text mx-auto" style="max-width: 36rem;">
+                        V okolí Tetína je několik hotelů a penzionů, které si můžete rezervovat. Pokud chcete přespat ve stanu, máme dostatek místa. Nabízíme také možnost svatebního taxi – bude jezdit do maximální vzdálenosti 25–30 km. Vše potřebné najdete v registračním formuláři.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="py-5 mt-0 footer-gradient">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <p class="display-6 fw-semibold footer-heading mb-4">
+                    Těšíme se na vás!<br>Lukáš Lajvr &amp; Matěj Hlavatý
+                </p>
+                <p class="mb-2 footer-copyright">© 2025 Lukáš &amp; Matěj</p>
+                <p class="mb-0 small footer-subtitle">Vytvořeno s láskou.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
